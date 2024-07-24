@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+
 class Header extends Component {
   state = {
     navlink: [
@@ -17,12 +18,12 @@ class Header extends Component {
   };
   render() {
     return (
-      <div className="shadow-md w-full top-0 left-0">
+      <div className="sticky shadow-md w-full top-0 left-0 dark:bg-black ">
         <div className="bg-custom-gradient py-4">
           <nav className="flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-20 ">
             <a
               href="/"
-              className=" text-nav-color text-2xl font-bold transition ease-in-out delay-150 duration-300 hover:text-nav-black"
+              className=" text-purple-600 dark:text-white text-2xl font-bold transition ease-in-out delay-150 duration-300 hover:text-nav-black"
             >
               Faran Khalil
             </a>
@@ -45,7 +46,7 @@ class Header extends Component {
                 <li key={nav.name} className="mb-4 md:mb-0">
                   <a
                     href={nav.link}
-                    className="text-xl text-nav-color transition ease-in-out delay-150 duration-200 hover:text-nav-black"
+                    className="text-xl text-purple-600 dark:text-white transition ease-in-out delay-150 duration-200 hover:text-nav-black"
                   >
                     {nav.name}
                   </a>

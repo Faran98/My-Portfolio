@@ -5,7 +5,7 @@ import Header from './components/header';
 
 function App() {
   return (
-    <div className='container'>
+    <div className='h-screen bg-nav-white'>
       <Header />
       <main>
       <Home />
