@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import Icons from "../common/icons";
+import DarkModeToggle from "./darkModeToggle";
 class Home extends Component {
     state = {
         currentParagraph: 0,
@@ -59,25 +60,34 @@ class Home extends Component {
     }
 
     render() {
-        const { displayText } = this.state; // Access displayText from state
+        const { displayText } = this.state;
         return (
             <div>
-                <div className="flex items-center justify-center">
-                    <div className="flex flex-col items-center justify-center ml-32">
+                <div className="md:flex  items-center justify-center bg-nav-white text-nav-black darkMode:bg-nav-black darkMode:text-white">
+                    <div className="flex flex-col  items-center justify-center md:ml-72">
                         <img
                             src="/images/Whitelaptop.png"
-                            className="h-36 mb-4"
+                            className="md:h-36 md:mb-4 h-32 mt-20"
                             alt="White Laptop"
                         />
                         <h1 className=" text-5xl font-bold  font-mono">Faran Khalil</h1>
-                        <div className=" mt-6 text-2xl font- font-mono typewriter">
+                        <div className=" md:mt-2 text-2xl font- font-mono typewriter">
                             {displayText}
                             <span className="caret">|</span>
                         </div>
+                        <div className="mt-5">
+                        <Icons/>
+                        </div>
+                        <div>
+                            <DarkModeToggle />
+                        </div>
+                        
                     </div>
-                    <div className="size-2/5 ml-32">
+                    
+                    <div className="md:size-2/5 md:ml-32">
                         <img
-                            src="/images/Avatar.jpg"
+                            src="/images/Avatar.png"
+                            className="item-center justify-center ms:h-3/5 ms:w-80"
                             alt="Avatar"
                         />
                     </div>
