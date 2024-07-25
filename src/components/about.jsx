@@ -15,7 +15,7 @@ class About extends Component {
           </span>
         </div>
         
-        <div className="flex flex-col md:flex-row md:mt-10 mt-5 pl-10 pt-2 pb-2 justify-start dark:bg-slate-700 dark:text-white items-center md:space-x-32">
+        <div className="flex flex-col md:flex-row md:mt-10 mt-5 md:pl-10 md:pt-2 pb-2 justify-start dark:bg-slate-700 dark:text-white items-center md:space-x-32">
           <div className="flex flex-col border-2 border-spacing-8  w-80  border-gray-300 shadow-2xl">
             <div className="flex flex-row">
               <div class="mt-5 ml-5 w-3 h-3 rounded-full bg-red-500"></div>
