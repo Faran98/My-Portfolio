@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Icons from "../common/icons";
 import DarkModeToggle from "./darkModeToggle";
+import Avatar from '../assets/images/Avatar.png';
+import purplelaptop from '../assets/images/purplelaptop.png';
+
 
 class Home extends Component {
   state = {
@@ -64,20 +67,20 @@ class Home extends Component {
     const { displayText } = this.state;
     return (
         
-      <div className="h-screen">
+      <div className="h-screen ">
         <div className="md:flex items-center justify-center bg-nav-white text-nav-black dark:bg-black dark:text-white h-lvh">
-          <div className="flex flex-col items-center justify-center md:ml-72 mt-36 md:mb-52">
+          <div className="flex flex-col items-center justify-center md:ml-64 mt-4 md:mb-52 md:mt-24 md:mr-28">
             <img
-              src="/images/Whitelaptop.png"
+              src={purplelaptop}
               className="md:h-36 md:mb-4 h-32"
               alt="White Laptop"
             />
-            <h1 className="text-5xl font-bold font-mono text-nav-black dark:text-white">Faran Khalil</h1>
-            <div className="md:mt-2 text-2xl font-mono typewriter text-nav-black dark:text-white">
+            <h1 className="md:text-5xl text-3xl font-bold font-mono text-nav-black dark:text-white flex"><h1 className=""> I'am </h1><span className="text-purple-600 ml-6 ">Faran Khalil</span></h1>
+            <div className="md:mt-4 text-2xl font-mono typewriter text-nav-black dark:text-white">
               {displayText}
               <span className="caret">|</span>
             </div>
-            <div className="mt-5">
+            <div className="md:mt-5">
               <Icons />
             </div>
             <div>
@@ -85,10 +88,10 @@ class Home extends Component {
             </div>
           </div>
 
-          <div className="md:w-2/5 md:ml-32 md:mb-24">
-            <img
-              src="/images/Avatar.png"
-              className="item-center justify-center md:h-3/5 "
+          <div className="flex items-center justify-center md:w-2/5 md:ml-30 md:mb-24 ">
+          <img
+              src={Avatar} //
+              className="item-center justify-center md:mr-64 md:h-2/5 object-contain"
               alt="Avatar"
             />
           </div>

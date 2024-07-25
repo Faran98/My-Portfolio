@@ -20,7 +20,7 @@ class Header extends Component {
     return (
       <div className="sticky shadow-md w-full top-0 left-0 dark:bg-black ">
         <div className="bg-custom-gradient py-4">
-          <nav className="flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-20 ">
+          <nav className="flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-20 custom:text-xl">
             <a
               href="/"
               className=" text-purple-600 dark:text-white text-2xl font-bold transition ease-in-out delay-150 duration-300 hover:text-nav-black"
