@@ -6,15 +6,11 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: {
-        leagueSpartan: ['LeagueSpartan', 'sans-serif'],
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(to top right, rgba(255, 165, 0, 0) 45%, rgba(255, 165, 0, 1) 100%)',
       },
-    backgroundImage: {
-      'custom-gradient': 'linear-gradient(to top right, rgba(255, 165, 0, 0) 45%, rgba(255, 165, 0, 1) 100%)',
     },
-    
   },
   plugins: [],
-}
 }
 
