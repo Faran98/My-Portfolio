@@ -3,7 +3,7 @@ import Icons from "../common/icons";
 import DarkModeToggle from "./darkModeToggle";
 import Avatar from '../assets/images/Avatar.png';
 import purplelaptop from '../assets/images/purplelaptop.png';
-
+import About from "./about";
 
 class Home extends Component {
   state = {
@@ -66,8 +66,8 @@ class Home extends Component {
   render() {
     const { displayText } = this.state;
     return (
-        
-      <div className="h-screen ">
+        <div>
+      <div className="h-screen">
         <div className="md:flex items-center justify-center bg-nav-white text-nav-black dark:bg-black dark:text-white h-lvh">
           <div className="flex flex-col items-center justify-center md:ml-64 mt-4 md:mb-52 md:mt-24 md:mr-28">
             <img
@@ -96,7 +96,12 @@ class Home extends Component {
             />
           </div>
         </div>
+       
       </div>
+      <div className="h-screen">
+      <About />
+    </div>
+    </div>
     );
   }
 }
