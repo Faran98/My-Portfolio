@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+
+
 class Header extends Component {
   state = {
     navlink: [
       { name: "Home", link: "/" },
       { name: "About me", link: "/" },
       { name: "Skills", link: "/" },
-      { name: "Resume", link: "/" },
       { name: "Contact", link: "/" },
+      { name: "Resume", link: "/" },
     ],
     open: false,
   };

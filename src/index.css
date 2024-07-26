@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.underline-after::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 4px;
+    background-image: linear-gradient(to right, red, blue );
+    margin: 0.5rem auto 0;
+
+  }
+  
