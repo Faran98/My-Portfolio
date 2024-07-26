@@ -6,23 +6,23 @@ class About extends Component {
   state = {};
   render() {
     return (
-      <div className=" dark:bg-slate-800 h-screen ">
+      <div className=" dark:bg-slate-800 md:h-auto h-auto pb-11">
         <div className="md:mx-40 pt-10">
 
         <div className="flex justify-center">
-          <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap ">
+          <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after ">
             ABOUT ME
           </span>
         </div>
         
-        <div className="flex flex-col md:flex-row md:mt-10 mt-5 pl-10 pt-2 pb-2 justify-start dark:bg-slate-700 dark:text-white items-center md:space-x-32">
+        <div className="flex flex-col md:flex-row md:mt-10 mt-5 md:pl-10 md:pt-7 md:pb-7  pb-2 justify-start dark:bg-slate-700 dark:text-white items-center md:space-x-32">
           <div className="flex flex-col border-2 border-spacing-8  w-80  border-gray-300 shadow-2xl">
             <div className="flex flex-row">
               <div class="mt-5 ml-5 w-3 h-3 rounded-full bg-red-500"></div>
               <div class="mt-5 ml-5 h-3 w-3 rounded-full bg-yellow-300"></div>
               <div class="mt-5 ml-5 w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"></hr>
+            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-black"></hr>
             <img
               src={faran} //
               className=" md:size-96 mb-10  "
@@ -35,7 +35,7 @@ class About extends Component {
               <div class="mt-5 ml-5 h-3 w-3 rounded-full bg-yellow-300"></div>
               <div class="mt-5 ml-5 w-3 h-3 rounded-full bg-green-500"></div>
             </div>
-            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700"></hr>
+            <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-black"></hr>
             <h2 className="ml-10"> HI I AM FARAN👋</h2>
             <p className="m-10">
               Welcome to my portfolio! I am passionate about Software
