@@ -6,6 +6,7 @@ import purplelaptop from '../assets/images/purplelaptop.png';
 import About from "./about";
 import Skills from "./skills";
 import Project from "./project";
+import Contact  from "./contact";
 
 class Home extends Component {
   state = {
@@ -109,6 +110,9 @@ class Home extends Component {
             </div>
             <div className="dark:bg-slate-800">
               <Project />
+            </div>
+            <div className="dark:bg-slate-800">
+              <Contact />
             </div>
 
     </div>
