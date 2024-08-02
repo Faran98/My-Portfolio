@@ -20,9 +20,9 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={handleThemeSwitch}
-      className=" w-auto h-auto p-2 dark:px-2.5 border-2 dark:text-custom-green dark:border-custom-green  mt-4 rounded-full flex items-center justify-center"
+      className=" w-auto h-auto p-2 text-xs md:p-2 md:dark:p-2 md:px-2.5 border-2 dark:text-custom-green hover:bg-custom-green dark:hover:text-white dark:border-custom-green  rounded-full flex items-center justify-center"
     >
-      <FontAwesomeIcon icon={theme === "dark" ? faMoon : faSun} />
+      <FontAwesomeIcon icon={theme === "dark" ? faSun :  faMoon} />
     </button>
   );
 };

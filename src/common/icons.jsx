@@ -15,7 +15,7 @@ class Icons extends Component {
 
             <div className="items-start justify-center ">
                 <nav>
-                <ul className='items-start dark:text-custom-green justify-center text-3xl flex flex-row space-x-5'>
+                <ul className='items-start dark:text-custom-green justify-center md:text-3xl text-2xl flex flex-row space-x-2'>
                     {this.state.icons.map(icon=>(
                         <li key={icon.name} >
                             <a href={icon.link} className='cursor-pointer'>

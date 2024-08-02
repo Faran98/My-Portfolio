@@ -12,8 +12,10 @@ module.exports = {
       colors: {
         'custom-green': '#00ff99',
       },
+      fontFamily: {
+        Oswald: ['Oswald', 'sans-serif'],
+      },
     },
   },
   plugins: [],
 }
-

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Icons from "../common/icons";
 import DarkModeToggle from "./darkModeToggle";
 import Avatar from '../assets/images/Avatar.png';
-import purplelaptop from '../assets/images/purplelaptop.png';
+import Embreld from '../assets/images/Embreld.png';
 import About from "./about";
 import Reveal from "./reveal.tsx";
 import Skills from "./skills";
@@ -77,24 +77,23 @@ class Home extends Component {
          <Reveal>
           <div className="flex flex-col items-center justify-center md:ml-64 mt-4 md:mb-52 md:mt-24 md:mr-28">
             <img
-              src={purplelaptop}
-              className="md:h-36 md:mb-4 h-32"
-              alt="White Laptop"
+              src={Embreld}
+              className="md:h-32 md:mb-4 h-16"
+              alt="Embreld Laptop"
             />
-            <h1 className="md:text-5xl text-3xl font-bold font-mono text-nav-black dark:text-white flex"><h1 className=""> I'am </h1><span className="text-purple-600 ml-6 ">Faran Khalil</span></h1>
-            <div className="md:mt-4 text-2xl font-mono typewriter text-nav-black dark:text-white">
+            <h1 className="md:text-5xl font-Oswald text-2xl font-bold  text-nav-black dark:text-white flex"><span className=""> I'am </span><span className="text-custom-green md:ml-6 ml-2  ">Faran Khalil</span></h1>
+            <div className="md:mt-4 text-xl font-mono typewriter text-nav-black dark:text-white">
               {displayText}
-              <span className="caret">|</span>
+              <span className="caret ">|</span>
             </div>
-            <div className="md:mt-5 mt-3 flex flex-row gap-10">
-              <div >
-                <a href={Resume} className="hover:bg-custom-green black w-24  border-2 hover:text-white border-custom-green hover:border-black transition-all px-5 py-2 ease-in-out text-custom-green" download>RESUME</a>
+            <div className="md:mt-5 mt-3 flex flex-row md:gap-8 gap-4">
+              <div className="mt-1.5" >
+                <a href={Resume} className="hover:bg-custom-green black md:w-24 w-16 rounded-sm  border-2 dark:hover:text-white dark:border-custom-green border-black hover:border-black bg-transition-all md:px-5 px-3 md:py-2  py-1 ease-in-out dark:text-custom-green text-black" download>RESUME</a>
               </div>
-              <Icons />
-            </div>
-            <div>
+              <div><Icons />
+              </div>              <div>
               <DarkModeToggle />
-
+            </div>
             </div>
           </div>
           </Reveal>

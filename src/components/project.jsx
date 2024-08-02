@@ -22,17 +22,17 @@ export default function Project() {
   return (
     <div className="h-auto pt-10 pb-16">
       <div className="flex justify-center">
-       <Reveal> <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after ">
+       <Reveal> <span className="md:text-3xl text-xl font-bold text-custom-green whitespace-nowrap underline-after ">
           PROJECT
         </span></Reveal>
       </div>
-      <div className="h-auto px-10 pt-5">
+      <div className="h-auto md:px-10 px-2 pt-5">
         <>
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
             autoplay={{
-              delay: 2500,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             pagination={{
@@ -46,18 +46,18 @@ export default function Project() {
             <SwiperSlide>
               <div>
               <div className="flex flex-col md:flex-row pt-10 md:pl-10  md:pb-10  pb-2 justify-center dark:bg-slate-700 dark:text-white items-center md:space-x-14">
-          <div className="flex flex-col border-2 border-spacing-8  w-80  border-gray-300 shadow-2xl">
+          <div className="flex flex-col border-2 border-spacing-8  md:w-80 w-56  border-gray-300 shadow-2xl">
                         <img
               src={Avatar} //
               className=" md:size-96 mb-10  "
               alt="Avatar"
             />
           </div>
-          <div className="flex flex-col border-2 border-spacing-8 md:pb-16 pb-16 pt-10 mt-10 mb-6 md:w-3/5 w-96  border-gray-300 shadow-2xl">
-                <h2 className="ml-10"> HI I AM FARAN👋</h2>
-                <hr class="w-48 h-1 mx-auto bg-gray-100 border-0 rounded  dark:bg-black"></hr>
+          <div className="md:text-sm  text-xs flex flex-col border-2 border-spacing-8 md:pb-16 pt-10 mt-10 mb-6 md:w-3/5 border-gray-300 shadow-2xl">
+                <h2 className="md:ml-10"> HI I AM FARAN👋</h2>
+                <hr class="md:w-48 w-40 h-1 mx-auto bg-gray-100 border-0 rounded  dark:bg-black"></hr>
 
-            <p className="m-10">
+            <p className="m-10 text-justify">
               Welcome to my portfolio! I am passionate about Software
               Engineering, and this portfolio Website serves as a showcase of my
               skills, experiences, and creative journey. I have dedicated myself
@@ -81,18 +81,18 @@ export default function Project() {
             <SwiperSlide>
               <div>
               <div className="flex flex-col md:flex-row pt-10 md:pl-10  md:pb-10  pb-2 justify-center dark:bg-slate-700 dark:text-white items-center md:space-x-14">
-          <div className="flex flex-col border-2 border-spacing-8  w-80  border-gray-300 shadow-2xl">
+          <div className="flex flex-col border-2 border-spacing-8  md:w-80 w-56  border-gray-300 shadow-2xl">
                         <img
               src={Avatar} //
               className=" md:size-96 mb-10  "
               alt="Avatar"
             />
           </div>
-          <div className="flex flex-col border-2 border-spacing-8 md:pb-16 pb-16 pt-10 mt-10 mb-6 md:w-3/5 w-96  border-gray-300 shadow-2xl">
-                <h2 className="ml-10"> HI I AM FARAN👋</h2>
-                <hr class="w-48 h-1 mx-auto bg-gray-100 border-0 rounded  dark:bg-black"></hr>
+          <div className="md:text-sm  text-xs flex flex-col border-2 border-spacing-8 md:pb-16 pt-10 mt-10 mb-6 md:w-3/5 border-gray-300 shadow-2xl">
+                <h2 className="md:ml-10"> HI I AM FARAN👋</h2>
+                <hr class="md:w-48 w-40 h-1 mx-auto bg-gray-100 border-0 rounded  dark:bg-black"></hr>
 
-            <p className="m-10">
+            <p className="m-10 text-justify">
               Welcome to my portfolio! I am passionate about Software
               Engineering, and this portfolio Website serves as a showcase of my
               skills, experiences, and creative journey. I have dedicated myself
@@ -116,18 +116,18 @@ export default function Project() {
             <SwiperSlide>
               <div>
               <div className="flex flex-col md:flex-row pt-10 md:pl-10  md:pb-10  pb-2 justify-center dark:bg-slate-700 dark:text-white items-center md:space-x-14">
-          <div className="flex flex-col border-2 border-spacing-8  w-80  border-gray-300 shadow-2xl">
+          <div className="flex flex-col border-2 border-spacing-8  md:w-80 w-56  border-gray-300 shadow-2xl">
                         <img
               src={Avatar} //
               className=" md:size-96 mb-10  "
               alt="Avatar"
             />
           </div>
-          <div className="flex flex-col border-2 border-spacing-8 md:pb-16 pb-16 pt-10 mt-10 mb-6 md:w-3/5 w-96  border-gray-300 shadow-2xl">
-                <h2 className="ml-10"> HI I AM FARAN👋</h2>
-                <hr class="w-48 h-1 mx-auto bg-gray-100 border-0 rounded  dark:bg-black"></hr>
+          <div className="md:text-sm  text-xs flex flex-col border-2 border-spacing-8 md:pb-16 pt-10 mt-10 mb-6 md:w-3/5 border-gray-300 shadow-2xl">
+                <h2 className="md:ml-10"> HI I AM FARAN👋</h2>
+                <hr class="md:w-48 w-40 h-1 mx-auto bg-gray-100 border-0 rounded  dark:bg-black"></hr>
 
-            <p className="m-10">
+            <p className="m-10 text-justify">
               Welcome to my portfolio! I am passionate about Software
               Engineering, and this portfolio Website serves as a showcase of my
               skills, experiences, and creative journey. I have dedicated myself
@@ -147,7 +147,8 @@ export default function Project() {
         </div>
         </div>
               
-            </SwiperSlide></Reveal>
+            </SwiperSlide>
+            </Reveal> 
             <div className="autoplay-progress" slot="container-end">
               <svg viewBox="0 0 48 48" ref={progressCircle}>
                 <circle cx="24" cy="24" r="20"></circle>
