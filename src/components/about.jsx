@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { DiVim } from "react-icons/di";
 import faran from "../assets/images/faran.jpeg";
+import Reveal from "./reveal.tsx";
 
 class About extends Component {
   state = {};
@@ -10,11 +11,11 @@ class About extends Component {
         <div className="md:mx-40 pt-10">
 
         <div className="flex justify-center">
-          <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after ">
+        <Reveal> <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after ">
             ABOUT ME
-          </span>
+          </span></Reveal>
         </div>
-        
+        <Reveal>
         <div className="flex flex-col md:flex-row md:mt-10 mt-5 md:pl-10 md:pt-7 md:pb-7  pb-2 justify-start dark:bg-slate-700 dark:text-white items-center md:space-x-32">
           <div className="flex flex-col border-2 border-spacing-8  w-80  border-gray-300 shadow-2xl">
             <div className="flex flex-row">
@@ -54,7 +55,7 @@ class About extends Component {
               together.
             </p>
           </div>
-        </div></div>
+        </div></Reveal></div>
       </div>
     );
   }

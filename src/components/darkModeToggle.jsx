@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 const DarkModeToggle = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
     if (theme === "dark") {
@@ -18,9 +20,9 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={handleThemeSwitch}
-      className="bg-purple-400 w-auto h-auto p-2 mt-4 rounded-full"
+      className=" w-auto h-auto p-2 dark:px-2.5 border-2 dark:text-custom-green dark:border-custom-green  mt-4 rounded-full flex items-center justify-center"
     >
-      {theme === "dark" ? 'Light Mode' : 'Dark Mode'}
+      <FontAwesomeIcon icon={theme === "dark" ? faMoon : faSun} />
     </button>
   );
 };

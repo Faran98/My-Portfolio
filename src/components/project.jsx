@@ -2,6 +2,7 @@ import Avatar from "../assets/images/Avatar.png";
 
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Reveal from "./reveal.tsx";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -21,9 +22,9 @@ export default function Project() {
   return (
     <div className="h-auto pt-10 pb-16">
       <div className="flex justify-center">
-        <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after ">
+       <Reveal> <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after ">
           PROJECT
-        </span>
+        </span></Reveal>
       </div>
       <div className="h-auto px-10 pt-5">
         <>
@@ -41,7 +42,7 @@ export default function Project() {
             modules={[Autoplay, Pagination, Navigation]}
             onAutoplayTimeLeft={onAutoplayTimeLeft}
             className="mySwiper"
-          >
+          ><Reveal>
             <SwiperSlide>
               <div>
               <div className="flex flex-col md:flex-row pt-10 md:pl-10  md:pb-10  pb-2 justify-center dark:bg-slate-700 dark:text-white items-center md:space-x-14">
@@ -146,7 +147,7 @@ export default function Project() {
         </div>
         </div>
               
-            </SwiperSlide>
+            </SwiperSlide></Reveal>
             <div className="autoplay-progress" slot="container-end">
               <svg viewBox="0 0 48 48" ref={progressCircle}>
                 <circle cx="24" cy="24" r="20"></circle>
