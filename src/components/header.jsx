@@ -31,7 +31,7 @@ class Header extends Component {
             </a>
             <div
               onClick={this.toggleMenu}
-              className="absolute right-8 top-5 md:hidden cursor-pointer"
+              className="text-white absolute right-8 top-5 md:hidden cursor-pointer"
             >
               {this.state.open ? (
                 <FaTimes className="text-2xl" />
@@ -40,7 +40,7 @@ class Header extends Component {
               )}
             </div>
             <ul
-              className={`flex flex-col md:flex-row md:items-center md:space-x-8 mt-4 md:mt-0 transition-all duration-500 ease-in-out ${
+              className={`text-white flex flex-col md:flex-row md:items-center md:space-x-8 mt-4 md:mt-0 transition-all duration-500 ease-in-out ${
                 this.state.open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
               } md:max-h-full md:opacity-100`}
             >
