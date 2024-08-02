@@ -4,9 +4,11 @@ import DarkModeToggle from "./darkModeToggle";
 import Avatar from '../assets/images/Avatar.png';
 import purplelaptop from '../assets/images/purplelaptop.png';
 import About from "./about";
+import Reveal from "./reveal.tsx";
 import Skills from "./skills";
 import Project from "./project";
 import Contact  from "./contact";
+import Resume from "../assets/Faran.pdf"
 
 class Home extends Component {
   state = {
@@ -72,6 +74,7 @@ class Home extends Component {
         <div>
       <div className="h-auto">
         <div className="md:flex items-center justify-center bg-nav-white text-nav-black border border-y-8 dark:border-black dark:bg-black dark:text-white h-auto">
+         <Reveal>
           <div className="flex flex-col items-center justify-center md:ml-64 mt-4 md:mb-52 md:mt-24 md:mr-28">
             <img
               src={purplelaptop}
@@ -83,7 +86,10 @@ class Home extends Component {
               {displayText}
               <span className="caret">|</span>
             </div>
-            <div className="md:mt-5">
+            <div className="md:mt-5 mt-3 flex flex-row gap-10">
+              <div >
+                <a href={Resume} className="hover:bg-custom-green black w-24  border-2 hover:text-white border-custom-green hover:border-black transition-all px-5 py-2 ease-in-out text-custom-green" download>RESUME</a>
+              </div>
               <Icons />
             </div>
             <div>
@@ -91,13 +97,16 @@ class Home extends Component {
 
             </div>
           </div>
+          </Reveal>
 
           <div className="flex items-center justify-center md:w-2/5 md:ml-30 md:mb-24 ">
+          <Reveal>
           <img
               src={Avatar} //
               className="item-center justify-center md:mr-64 md:h-2/5 object-contain"
               alt="Avatar"
             />
+            </Reveal>
           </div>
         </div>
        
