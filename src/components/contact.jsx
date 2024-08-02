@@ -1,22 +1,24 @@
 import React from 'react';
 import Reveal from "./reveal.tsx";
+import Lottie from "lottie-react";
+import contactAnimation from '../assets/animation/contact.json';
 
 const Contact = () => {
   return (
     <div className="h-auto pb-10">
       <div className="flex justify-center mb-4">
         <Reveal>
-          <span className="md:text-3xl text-2xl font-bold text-purple-600 whitespace-nowrap underline-after">
+          <span className="md:text-3xl text-xl font-bold text-custom-green whitespace-nowrap underline-after">
             CONTACT ME
           </span>
         </Reveal>
       </div>
-      <div>
-        <div className='w-full md:w-1/2 p-6 md:mx-24'>
+      <div className='grid md:grid-cols-2 w-ful md:mx-24' >
+        <div className=' w-full md:w-full p-6 '>
           <Reveal width="100%">
             <form
               className='flex flex-col'
-              action="https://formsubmit.co/mirzazain269@gmail.com"
+              action="https://formsubmit.co/farankhalilmail@gmail.com"
               method="POST"
             >
               <input
@@ -40,16 +42,22 @@ const Contact = () => {
               <textarea
                 name='message'
                 placeholder='Message'
-                className='w-full h-32 bg-gray-200 p-2 my-2' 
+                className='w-full h-32 bg-gray-200 p-2 my-2'
               />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://mirzazain.vercel.app/thankyou/" />
+              {/* <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://mirzazain.vercel.app/thankyou/" /> */}
               <button className='w-full h-14 bg-purple-600 text-white font-bold mt-2'>
                 Send
               </button>
             </form>
           </Reveal>
-        </div>
+          </div>
+          <Reveal>
+            <div className=''>
+              <Lottie animationData={contactAnimation} loop={true} />
+            </div>
+          </Reveal>
+        
       </div>
     </div>
   );

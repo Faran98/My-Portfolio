@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
-
+import Resume from "../assets/Faran.pdf";
 
 class Header extends Component {
   state = {
@@ -10,7 +9,7 @@ class Header extends Component {
       { name: "About me", link: "/" },
       { name: "Skills", link: "/" },
       { name: "Contact", link: "/" },
-      { name: "Resume", link: "/" },
+      { name: "Resume", link: Resume },
     ],
     open: false,
   };
@@ -21,15 +20,14 @@ class Header extends Component {
 
   render() {
     return (
-   
       <header className="sticky top-0 z-50 w-full bg-white dark:bg-black shadow-md">
-        <div className="bg-custom-gradient md:py-4 pt-4">
-          <nav className="flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-20 custom:text-xl">
+        <div className="dark:bg-transparent md:py-4 pt-4">
+          <nav className="flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-44 custom:text-xl">
             <a
               href="/"
-              className="text-purple-600 dark:text-white text-2xl font-bold transition ease-in-out delay-150 duration-300 hover:text-nav-black"
+              className="flex  dark:text-white text-2xl font-bold transition ease-in-out delay-150 duration-300 hover:text-nav-black"
             >
-              Faran Khalil
+              FK<span className="text-custom-green">.</span>
             </a>
             <div
               onClick={this.toggleMenu}
@@ -50,7 +48,10 @@ class Header extends Component {
                 <li key={nav.name} className="mb-4 md:mb-0">
                   <a
                     href={nav.link}
-                    className="text-xl text-purple-600 dark:text-white transition ease-in-out delay-150 duration-200 hover:text-nav-black"
+                    className={`text-xl text-black dark:text-white transition ease-in-out delay-150 duration-200 hover:text-nav-black ${
+                      nav.name === "Resume" ? "dark:text-black text-white bg-custom-green black w-24 rounded-3xl border-2 hover:text-white border-custom-green hover:border-black bg-transition-all px-2 py-1 ease-in-out" : ""
+                    }`}
+                    download={nav.name === "Resume"}
                   >
                     {nav.name}
                   </a>
@@ -60,7 +61,6 @@ class Header extends Component {
           </nav>
         </div>
       </header>
-      
     );
   }
 }

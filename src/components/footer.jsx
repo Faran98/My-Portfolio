@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="md:mt-5">
               <Icons />
             </div>
-            <h4 className='text-sm md:text-lg font-medium font-sans '>Desgined by "Faran Khalil"  ©copyright-2024</h4>
+            <h4 className='text-xs md:text-lg font-medium font-sans '>Desgined by "Faran Khalil"  ©copyright-2024</h4>
         </div>
     </footer>
   )
