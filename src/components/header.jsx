@@ -5,10 +5,11 @@ import Resume from "../assets/Faran.pdf";
 class Header extends Component {
   state = {
     navlink: [
-      { name: "Home", link: "/" },
-      { name: "About me", link: "/" },
-      { name: "Skills", link: "/" },
-      { name: "Contact", link: "/" },
+      { name: "Home", link: "/home" },
+      { name: "About me", link: "/about" },
+      { name: "Skills", link: "/skills" },
+      { name: "project", link: "/project" },
+      { name: "Contact", link: "/contact" },
       { name: "Resume", link: Resume },
     ],
     open: false,
@@ -31,7 +32,7 @@ class Header extends Component {
             </a>
             <div
               onClick={this.toggleMenu}
-              className="text-white absolute right-8 top-5 md:hidden cursor-pointer"
+              className="dark:text-white text-black absolute right-8 top-5 md:hidden cursor-pointer"
             >
               {this.state.open ? (
                 <FaTimes className="text-2xl" />

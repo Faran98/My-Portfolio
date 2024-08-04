@@ -5,7 +5,8 @@ import contactAnimation from '../assets/animation/contact.json';
 
 const Contact = () => {
   return (
-    <div className="h-auto pb-10">
+    <div className="h-auto pb-10 pt-10">
+      
       <div className="flex justify-center mb-4">
         <Reveal>
           <span className="md:text-3xl text-xl font-bold text-custom-green whitespace-nowrap underline-after">
