@@ -26,7 +26,7 @@ class About extends Component {
             <hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-black"></hr>
             <img
               src={faran} //
-              className=" md:size-96 mb-10  "
+              className=" md:size-auto mb-10  "
               alt="Avatar"
             />
           </div>
