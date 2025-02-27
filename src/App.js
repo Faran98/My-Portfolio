@@ -11,10 +11,10 @@ import Skills from "./components/skills";
 import Project from "./components/project";
 
 function App() {
-  // Ensure localStorage is checked properly
   const getInitialTheme = () => {
-    return localStorage.getItem("theme") === "dark";
+    return localStorage.getItem("theme") !== "light"; 
   };
+  
 
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(getInitialTheme());
@@ -29,7 +29,6 @@ function App() {
     }
   }, [darkMode]);
 
-  // Simulate loading screen
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);

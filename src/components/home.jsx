@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Icons from "../common/icons";
-import DarkModeToggle from "./darkModeToggle";
 import Avatar from '../assets/images/Avatar.png';
 import Embreld from '../assets/images/Embreld.png';
 import About from "./about";
