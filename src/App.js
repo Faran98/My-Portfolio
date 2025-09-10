@@ -46,8 +46,8 @@ function App() {
         
           <main className="flex-grow">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/home" element={<Home darkMode={darkMode} setDarkMode={setDarkMode}/>} />
+            <Route path="/" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />} />
+            <Route path="/home" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />} />
               <Route path="/about" element={<About />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/project" element={<Project />} />

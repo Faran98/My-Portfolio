@@ -68,3 +68,138 @@ body {
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
 }
+/* Carousel Container */
+/* === Carousel Wrapper === */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  background: rgba(20, 20, 40, 0.8);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-shrink: 0; /* buttons won't shrink */
+}
+.carousel-btn:hover {
+  background: rgba(40, 40, 80, 0.9);
+}
+
+/* Flip Card */
+.carousel-card {
+  perspective: 1000px;
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  cursor: pointer;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+.carousel-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.carousel-card.flipped .carousel-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front & Back Faces */
+.carousel-card-front,
+.carousel-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgba(20, 20, 40, 0.8);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+}
+.carousel-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+.carousel-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 1rem;
+}
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* ensures image always covers without distortion */
+  border-radius: 12px; /* optional for smooth edges */
+  display: block;
+}
+
+
+/* Title with glowing gradient */
+.title {
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* responsive font size */
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #00ffcc, #ff00cc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
+}
+
+/* === Responsive Layout === */
+@media (max-width: 768px) {
+  .carousel-card {
+    max-width: 90%;  /* smaller width on mobile */
+    height: 280px;
+  }
+  .carousel-card img {
+    height: 250px; /* adjust to your design */
+  }
+  .carousel-card-back {
+    font-size: 0.9rem;
+  }
+
+  .carousel-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .carousel-card img {
+    height: auto;
+    max-height: 300px;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-card {
+    max-width: 95%;
+    height: 250px;
+  }
+
+  .title {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+
+  .carousel-card-back {
+    font-size: 0.8rem;
+  }
+}
