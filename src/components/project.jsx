@@ -67,9 +67,13 @@ export default function Project() {
                         className="w-full h-48 md:h-64 object-cover rounded-xl"
                       />
                       <h2 className="title">{project.title}</h2>
-                      <div className="flex justify-center gap-4 mt-4 text-3xl">
+                      <div className="flex justify-center flex-wrap gap-3 mt-4">
                         {project.tech.map((icon, i) => (
-                          <span key={i}>{icon}</span>
+                          <span key={i} className="flex items-center">
+                            {React.cloneElement(icon, {
+                              className: "w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8",
+                            })}
+                          </span>
                         ))}
                       </div>
                     </div>
