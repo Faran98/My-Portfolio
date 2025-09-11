@@ -4,7 +4,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 class Header extends Component {
   state = {
     navlink: [
-      { name: "Home", link: "/home" },
+      { name: "Home", link: "/" },
       { name: "About me", link: "/about" },
       { name: "Skills", link: "/skills" },
       { name: "Project", link: "/project" },
@@ -47,14 +47,21 @@ class Header extends Component {
             {/* Navigation Links */}
             <ul
               className={`text-white flex flex-col md:flex-row md:items-center md:space-x-8 mt-4 md:mt-0 transition-all duration-500 ease-in-out ${
-                this.state.open ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                this.state.open
+                  ? "max-h-screen opacity-100"
+                  : "max-h-0 opacity-0"
               } md:max-h-full md:opacity-100`}
             >
               {this.state.navlink.map((nav) => (
                 <li key={nav.name} className="mb-4 md:mb-0">
                   <a
                     href={nav.link}
-                    className="text-xl text-black dark:text-white transition ease-in-out delay-150 duration-200 hover:text-nav-black"
+                    className={`text-xl transition ease-in-out delay-150 duration-200 hover:text-nav-black 
+      ${
+        window.location.pathname === nav.link
+          ? "text-custom-green font-semibold"
+          : "text-black dark:text-white"
+      }`}
                   >
                     {nav.name}
                   </a>
@@ -64,8 +71,8 @@ class Header extends Component {
               {/* Resume Download Button */}
               <li>
                 <a
-                  href="/faran_khalil_Resume.pdf"
-                  download="faran_khalil_Resume.pdf"
+                  href="/Resume-FaranKhalil.pdf"
+                  download="Resume-FaranKhalil.pdf"
                   className="text-xl dark:text-black text-white bg-custom-green black w-24 rounded-3xl border-2 hover:text-white border-custom-green hover:border-black bg-transition-all px-2 py-1 ease-in-out md:mt-3 sm:mt-2 "
                 >
                   Resume
